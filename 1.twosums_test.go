@@ -21,18 +21,21 @@ import "testing"
 func TestTowSum(t *testing.T) {
 	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
 	sum := 14
-	x, y := TwoSum(arr, sum)
-	t.Log(x, y)
+	x := TwoSum(arr, sum)
+	t.Log(x)
 }
 
 // 空间换时间  key是arr的值，value是坐标，然后判断key是否存在
-func TwoSum(arr []int, sum int) (int, int) {
+func TwoSum(arr []int, sum int) []int {
 	arrMap := make(map[int]int)
+	var res []int
 	for k, v := range arr {
 		if val, ok := arrMap[sum-v]; ok {
-			return val, k
+			res = append(res, val)
+			res = append(res, k)
+			return res
 		}
 		arrMap[v] = k
 	}
-	return -1, -1
+	return []int{-1, -1}
 }
