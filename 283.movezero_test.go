@@ -17,7 +17,7 @@ import (
 */
 
 func TestMoveZero(t *testing.T) {
-	arr := []int{1, 0, 2, 0, 3, 0, 4}
+	arr := []int{0, 1, 0, 2, 0, 3, 0, 4}
 	t.Log(MoveZero(arr))
 	MoveZero2(arr)
 	t.Log(arr)

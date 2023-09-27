@@ -14,8 +14,9 @@ func TestMergeArray(t *testing.T) {
 }
 
 func MergeArray(a []int, b []int) []int {
-	var res []int
-	var i, j int
+	var res []int //结果集
+	var i, j int  //双指针
+	//备注：数组长度相同的话，可以完全合并
 	for i < len(a) && j < len(b) {
 		if a[i] < b[j] {
 			res = append(res, a[i])
@@ -25,6 +26,7 @@ func MergeArray(a []int, b []int) []int {
 			j++
 		}
 	}
+	//如果a有剩余，补充到res里
 	for i < len(a) {
 		res = append(res, a[i])
 		i++
