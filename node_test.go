@@ -15,13 +15,13 @@ func TestNodes(t *testing.T) {
 }
 
 // 反转链表
-func ReverseNodes(n *Node) *Node {
+func ReverseNodes(head *Node) *Node {
 	var prev *Node
-	for n != nil {
-		next := n.Next
-		n.Next = prev
-		prev = n
-		n = next
+	for head != nil {
+		next := head.Next
+		head.Next = prev
+		prev = head
+		head = next
 	}
 	return prev
 }
