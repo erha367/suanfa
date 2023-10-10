@@ -14,6 +14,10 @@ func TestNodes(t *testing.T) {
 	PrintNode(ReverseNodes(p1))
 }
 
+/*
+	head --> prev --> head.next --> next --> head  这样循环
+*/
+
 // 反转链表
 func ReverseNodes(head *Node) *Node {
 	var prev *Node
