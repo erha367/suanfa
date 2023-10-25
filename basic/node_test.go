@@ -1,4 +1,4 @@
-package suanfa
+package basic
 
 import (
 	"fmt"
