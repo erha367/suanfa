@@ -67,3 +67,5 @@ func isSubtree(s *TreeNode, t *TreeNode) bool {
 前序遍历树2，结果集放入数组2
 数组2如果是数组1的子集，则说明树2是树1的子树。
 */
+
+//leetocode-297
