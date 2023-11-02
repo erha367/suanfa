@@ -1,4 +1,4 @@
-package dp
+package donggui
 
 import (
 	"log"
@@ -36,7 +36,7 @@ func LongestIncreasingSubsequence(nums []int) int {
 		dp[i] = 1
 		for j := 0; j < i; j++ {
 			if nums[i] > nums[j] {
-				dp[i] = max(dp[i], dp[j]+1)
+				dp[i] = Max(dp[i], dp[j]+1)
 				if dp[i] > big {
 					big = dp[i]
 				}
@@ -47,7 +47,7 @@ func LongestIncreasingSubsequence(nums []int) int {
 	return big
 }
 
-func max(x, y int) int {
+func Max(x, y int) int {
 	if x > y {
 		return x
 	}

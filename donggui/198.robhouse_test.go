@@ -1,4 +1,4 @@
-package dp
+package donggui
 
 import "testing"
 
@@ -25,7 +25,7 @@ func Money(nums []int) int {
 		return nums[0]
 	}
 	var maxi int
-	//dp 每个元素存储打劫这间房屋的金额
+	//donggui 每个元素存储打劫这间房屋的金额
 	dp := make([]int, len(nums))
 	//初始值
 	dp[0] = 1

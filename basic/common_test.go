@@ -98,3 +98,27 @@ func TestDeepEqual(t *testing.T) {
 	fmt.Println(result4) // 输出: true
 
 }
+
+func TestIsSubArray(t *testing.T) {
+	a := []int{1, 2, 3, 4, 5, 6}
+	b := []int{3, 4, 5}
+	res := isSubArray(a, b)
+	t.Log(res)
+}
+
+func isSubArray(nums []int, target []int) bool {
+	var i, j int
+	for i < len(nums) && j < len(target) {
+		if nums[i] != target[j] {
+			i++
+		} else {
+			j++
+			i++
+		}
+
+	}
+	if j == len(target) {
+		return true
+	}
+	return false
+}
