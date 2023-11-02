@@ -1,6 +1,7 @@
 package greedy
 
 import (
+	"log"
 	"testing"
 )
 
@@ -33,11 +34,13 @@ func candy(ratings []int) int {
 			candies[i] = candies[i-1] + 1
 		}
 	}
+	log.Println(candies)
 	for i := n - 1; i > 0; i-- {
 		if ratings[i-1] > ratings[i] {
 			candies[i-1] = max(candies[i-1], candies[i]+1)
 		}
 	}
+	log.Println(candies)
 	sum := 0
 	for i := 0; i < n; i++ {
 		sum += candies[i]
